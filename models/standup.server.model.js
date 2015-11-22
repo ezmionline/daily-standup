@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Scheme = mongoose.Schema;
+var Schema = mongoose.Schema;
 
 var standupSchema = new Schema({
   memberName: String,
@@ -9,3 +9,5 @@ var standupSchema = new Schema({
   inpediment: String,
   createdOn: { type: Date, default: Date.now }
 });
+
+module.exports = mongoose.model('Standup', standupSchema);
