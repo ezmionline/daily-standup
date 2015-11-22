@@ -8,6 +8,11 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var mongoose = require('mongoose');
+var mongodbConfig = require('./mongodbConfig');
+
+mongoose.connect(mongodbConfig.connectionString);
+
 var app = express();
 
 var swig = require('swig');
